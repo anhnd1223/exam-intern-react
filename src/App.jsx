@@ -1,4 +1,6 @@
 import './App.css'
+import CartButton from './components/CartButton';
+import ItemCard from './components/ItemCard';
 
 const products = [
     { id: 1, name: 'Áo thun trắng', price: 150000, image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab' },
@@ -19,13 +21,10 @@ function App() {
 
   return (
     <main>
+      <CartButton items = {products}/>
       <div className="container">
           {products.map((item) => (
-              <div key={item.id}>
-                  <img src={item.image} alt={item.name} title={item.name} width={300}/>
-                  <p>{item.name}</p>
-                  <p>{item.price}</p>
-              </div>
+              <ItemCard key={item.id} item={item}/>
           ))}
       </div>
     </main>
