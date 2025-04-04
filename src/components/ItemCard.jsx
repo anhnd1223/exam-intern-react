@@ -1,3 +1,4 @@
+import { FaCartShopping } from "react-icons/fa6";
 
 const ItemCard = ({ item, onclick }) => {
     return (
@@ -9,7 +10,7 @@ const ItemCard = ({ item, onclick }) => {
                     <div className="item-text">{item.price.toLocaleString()} VND</div>
                 </div>
                 <div>
-                    <button onClick={() => onclick(item.id,1)}> Mua </button>
+                    <button onClick={() => onclick(item.id,1)}> <FaCartShopping style={{verticalAlign: 'middle' }} /></button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const CartButton = ({ cart }) => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -12,7 +13,7 @@ const CartButton = ({ cart }) => {
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <div style={{ position: "relative", marginBottom: "20px" }}>
                 <button onClick={toggleDropdown}>
-                    Giỏ hàng
+                    Giỏ hàng <MdOutlineShoppingCart style={{verticalAlign: 'middle' }}/>
                 </button>
                 <Notification cart={cart}/>
                 {cart && isDropdownVisible && (

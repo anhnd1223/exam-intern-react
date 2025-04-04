@@ -27,10 +27,11 @@ function App() {
     if (!product) return;
 
     setCart((prevCart) => {
-      const newCart = [ ...prevCart ];
-      const existInCart = newCart.find((p) => p.id === id)
-      if (existInCart) {
-        existInCart.quantity += quantityChange;
+      const existInCart = prevCart.findIndex((p) => p.id === id)
+      if (existInCart!==-1) {
+        return prevCart.map((item)=>
+          item.id === id?{...item,quantity: item.quantity+1}:item
+        );
       } else {
         const newProduct = {
           id: product.id,
@@ -39,9 +40,8 @@ function App() {
           image: product.image,
           quantity: quantityChange
         }
-        return [...newCart,newProduct]
+        return [...prevCart,newProduct]
       }
-      return newCart;
     });
   }
 
