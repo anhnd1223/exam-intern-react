@@ -9,16 +9,15 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
-  background-color: lightgray;
   border-radius: 5px;
   padding: 12px;
 }
 .item-card-container:hover{
-  background-color: #f9f9f9;
+  background-color: lightgray;
 }
 .container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
@@ -62,7 +61,7 @@
   right: 0;
   width: 400%;
   background-color: white;
-  border-radius: 5%;
+  border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
   padding: 0;
   margin: 0;
@@ -71,7 +70,6 @@
 }
 .dropdown-list li {
   padding: 10px 10px;
-  transition: background 0.2s;
 }
 .dropdown-list li:hover {
   background-color: lightgray;
